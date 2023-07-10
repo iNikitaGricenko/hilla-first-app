@@ -1,4 +1,5 @@
 import HelloReactView from 'Frontend/views/helloreact/HelloReactView.js';
+import CpuView from 'Frontend/views/cpu/CpuView.js';
 import MainLayout from 'Frontend/views/MainLayout.js';
 import { lazy } from 'react';
 import { createBrowserRouter, IndexRouteObject, NonIndexRouteObject, useMatches } from 'react-router-dom';
@@ -34,6 +35,7 @@ export const routes: readonly ViewRouteObject[] = [
     handle: { icon: 'null', title: 'Main' },
     children: [
       { path: '/', element: <HelloReactView />, handle: { icon: 'globe-solid', title: 'Hello React' } },
+      { path: '/cpu', element: <CpuView />, handle: { icon: 'globe-solid', title: 'Cpu' } },
       { path: '/about', element: <AboutView />, handle: { icon: 'file', title: 'About' } },
     ],
   },
